@@ -18,13 +18,13 @@ pipeline{
                    }
              }
         }
-        stage('Terraform validate'){
-             steps{
-                 dir('EC2_TERRAFORM') {
-                      sh 'terraform validate'
-                   }
-             }
-        }
+        // stage('Terraform validate'){
+        //      steps{
+        //          dir('EC2_TERRAFORM') {
+        //               sh 'terraform validate'
+        //            }
+        //      }
+        // }
         stage('Terraform plan'){
              steps{
                  dir('EC2_TERRAFORM') {
