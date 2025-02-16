@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+EC2_TERRAFORM/.terraform/*
+EC2_TERRAFORM/.terraform.*
+EC2_TERRAFORM/*.tfstate
+EC2_TERRAFORM/*.tfstate.*
+
+EC2_TERRAFORM/*.tfstate
+EC2_TERRAFORM/*.tfstate.*
+EC2_TERRAFORM/*.tfvars
+EC2_TERRAFORM/.terraform/
