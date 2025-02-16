@@ -6,9 +6,6 @@ resource "aws_instance" "example" {
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.jenkins_security_group.id]
 
-  # Ensure the instance is created in the default VPC
-  subnet_id = data.aws_subnets.default.ids[0]
-
   key_name = "Docker"
 
   user_data = <<-EOF
@@ -72,16 +69,5 @@ resource "aws_security_group" "jenkins_security_group" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
-data "aws_vpc" "default" {
-  default = true
-}
-
-data "aws_subnets" "default" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_vpc.default.id]
   }
 }
