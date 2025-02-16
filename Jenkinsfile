@@ -17,7 +17,7 @@ pipeline {
         
         stage('Build New Image') {
             steps { 
-                dir('EC2_TERRAFORM') {
+                dir('Hotstar-Clone') {
                 sh "docker build -t shaikhfaizan0/myhub:hotstar ."
                 }
             }
