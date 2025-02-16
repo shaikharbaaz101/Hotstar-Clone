@@ -17,10 +17,8 @@ pipeline {
         
         stage('Build New Image') {
             steps { 
-                dir('Hotstar-Clone') {
                 sh "docker build -t shaikhfaizan0/myhub:hotstar ."
                 }
-            }
         }
         
          stage('run command docker images') {
